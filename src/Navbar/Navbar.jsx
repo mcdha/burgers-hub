@@ -54,7 +54,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   className="nav-link"
-                  activeClassName="link-active active"
+                  
                   to="/home"
                 >
                   Home
@@ -64,7 +64,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   className="nav-link"
-                  activeClassName="link-active active"
+                  
                   to="/about"
                 >
                   About us
@@ -74,7 +74,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   className="nav-link"
-                  activeClassName="link-active active"
+                 
                   to="/packages"
                 >
                   Packages
@@ -84,7 +84,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   className="nav-link"
-                  activeClassName="link-active active"
+                 
                   to="/contact"
                 >
                   Contact us
