@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import 'aos/dist/aos.css'; // Import the AOS CSS
 import AOS from 'aos'; // Import AOS
-import './Navbar.css';
+import './navbar.css';
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
