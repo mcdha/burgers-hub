@@ -5,7 +5,7 @@ import './home.css'
 const Home = () => {
   return (
    <>
-   <img className='style-effect' src="public/style-effect/hero-style.svg" />
+   <img className='style-effect' src="images/style-effect/hero-style.svg" />
 
    <section>
     <div className="container">
@@ -18,7 +18,7 @@ const Home = () => {
             </div>
             <div className="col-12 col-lg-6 col-md-6">
                 <div className="hero-box">
-                    <img className='hero-image' src="public/images/hero.png" alt="hero"/>
+                    <img className='hero-image' src="images/hero.png" alt="hero"/>
                 </div>  
             </div>
         </div>
@@ -58,7 +58,7 @@ const Home = () => {
         <div className="row">
             <div className="col-12 col-lg-4 col-md-6">
                 <div className="hero-box1">
-                    <img className='hero-image1' src="public/images/hero1.png" alt="hero1"/>
+                    <img className='hero-image1' src="images/hero1.png" alt="hero1"/>
                 </div>  
             </div>
 

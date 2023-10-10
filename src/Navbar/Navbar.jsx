@@ -43,7 +43,7 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <a className="navbar-brand mt-2 mt-lg-0" href="#">
               <img
-                src="public/logo/logo.png"
+                src="images/logo/logo.png"
                 height="50"
                 alt="Burger Logo"
                 loading="lazy"
