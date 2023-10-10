@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react';
+import YouTube from 'react-youtube';
 import './home.css'
 
 
+
 const Home = () => {
+
+    const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
+    const openVideoModal = () => {
+        setIsVideoModalOpen(true);
+};
+
+    const closeVideoModal = () => {
+        setIsVideoModalOpen(false);
+};
+
+    const videoOptions = {
+        width: '100%',
+        height: 500,
+};
+
+    const videoId = '7O0FcxNjB6Q';
+
   return (
    <>
    <img className='style-effect' src="images/style-effect/hero-style.svg" />
@@ -14,7 +34,7 @@ const Home = () => {
                 <h1 className='h1-hero'>Your Favourite Burger Delivered Hot and Fresh</h1>
                 <p className='p-hero'>Satisfy Your Cravings, One Bite at a Time! Our mouthwatering burgers, crafted with the finest ingredients and bursting with flavor, are the perfect solution to your hunger pangs, ensuring that each bite is a tantalizing journey of taste and satisfaction.
                 </p>
-                <button className='btn btn-rounded btn-hero'>Order now &nbsp;<i className="fas fa-arrow-right-long"></i></button>
+                <button className='btn btn-rounded btn-hero'>Order Now &nbsp;<i className="fas fa-arrow-right-long"></i></button>
             </div>
             <div className="col-12 col-lg-6 col-md-6">
                 <div className="hero-box">
@@ -53,7 +73,7 @@ const Home = () => {
    </section>
    
    {/* <img className='style-effect1' src="public/style-effect/hero-style1.svg" /> */}
-   <section className="section3 mt-5">
+   <section className="section3">
     <div className="container">
         <div className="row">
             <div className="col-12 col-lg-4 col-md-6">
@@ -63,9 +83,35 @@ const Home = () => {
             </div>
 
             <div className="col-12 col-lg-8 col-md-6 mt-2">
-                <h2>Burger Is An Important Part Of A Balanced Diet</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deleniti quod, quasi, exercitationem officiis dolor accusantium perferendis distinctio error impedit cumque eum magni reprehenderit beatae corrupti? Debitis corrupti dicta dolore.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deleniti quod, quasi, exercitationem officiis dolor accusantium perferendis distinctio error impedit cumque eum magni reprehenderit beatae corrupti? Debitis corrupti dicta dolore.</p>
+                <h2 className=''>Burger Is An Important Part Of A Balanced Diet</h2>
+                <p className='p-hero'>Burgers play a crucial role in maintaining a balanced diet. They provide an excellent source of protein, essential for muscle growth and repair, as well as carbohydrates that offer a quick source of energy.
+                </p>
+                <p className='p-hero'>Furthermore, burgers can be a versatile canvas for incorporating various vegetables, like lettuce, tomatoes, and onions, enriching the meal with vitamins and minerals. 
+                </p>
+                
+                <button type="button" className="btn btn-rounded btn-nav btn-lg" onClick={openVideoModal}>
+                    Watch Video &nbsp; <i className="fas fa-play"></i>
+                </button>
+
+                    <div className={`modal fade ${isVideoModalOpen ? 'show' : ''}`} id="myModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden={!isVideoModalOpen} style={{ display: isVideoModalOpen ? 'block' : 'none' }}>
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title" id="exampleModalLabel">
+                                    Video Ads Promotion
+                                </h5>
+                                <button type="button"className="btn-close" onClick={closeVideoModal} aria-label="Close">
+                                </button>
+                            </div>
+                            <div className="modal-body">
+                                {isVideoModalOpen && (
+                                    <YouTube videoId={videoId} opts={videoOptions} />
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

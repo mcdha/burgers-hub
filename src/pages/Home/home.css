@@ -45,7 +45,7 @@ h1 {
 
 .section2 {
     margin-top: 8rem;
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
 }
 
 .home-icon {
@@ -72,8 +72,14 @@ h1 {
 }
 
 h2 {
+    font-size: 2.5rem;
     font-family: 'Lilita One', cursive;
 }
+
+h5 {
+    font-family: 'Lilita One', cursive;
+}
+  
 
 
 
