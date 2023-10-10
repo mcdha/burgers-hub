@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+.style-effect {
+    height: 100%;
+    width: 85%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Lilita One', cursive;
+}
+
+.p-hero {
+    font-size: 1.1rem;
+}
+
+.btn-hero {
+    font-size: 1rem;
+    text-transform: none;
+    background-color: #c49c0b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-hero:hover {
+    background-color: #656565;
+    color: #fff;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-box {
+    width: 100%;
+    height: 110%;
+}
+
+.section2 {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.home-icon {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.btn-clock, .btn-location, .btn-phone {
+    border-radius: 100%;
+    background-color: #c49c0b;
+}
+
+/* ______________________________________________________________section3 */
+
+
+.hero-image1 {
+    height: 100%;
+    width: 100%;
+}
+
+.hero-box1 {
+    height: 100%;
+    width: 100%;
+}
+
+h2 {
+    font-family: 'Lilita One', cursive;
+}
+
+
+
+
+
+
+
+
+
