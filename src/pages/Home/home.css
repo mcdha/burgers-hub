@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
-.style-effect {
-    height: 100%;
-    width: 85%;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    right: 0;
+/* ___________________________________________________All */
+
+h2 {
+    font-size: 2.5rem;
+    font-family: 'Lilita One', cursive;
+}
+
+h5 {
+    font-family: 'Lilita One', cursive;
 }
 
 h1 {
@@ -14,8 +16,24 @@ h1 {
     font-family: 'Lilita One', cursive;
 }
 
+h3 {
+    font-size: 1.5rem;
+    font-family: 'Lilita One', cursive;
+}
+
 .p-hero {
     font-size: 1.1rem;
+}
+
+/* _______________________________________________________________ */
+
+.style-effect {
+    height: 100%;
+    width: 85%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .btn-hero {
@@ -71,14 +89,96 @@ h1 {
     width: 100%;
 }
 
-h2 {
-    font-size: 2.5rem;
+/* ___________________________________________________________________section4 */
+
+.fa-2x {
+    color: #c49c0b;
+}
+
+/* ________________________________________________________________________section5 */
+
+/* .bg-image {
+    background-image: url(images/style-effect/back-style.svg);
+} */
+
+.card-trans {
+    mix-blend-mode: multiply;
+}
+
+
+.card-style {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    height: 8.5rem;
+}
+
+.fa-plus {
+    position: absolute;
+    right: 1.8rem;
+    bottom: 1.8rem;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.fa-plus:hover {
+    transform: scale(1.5);
+    transition: transform 0.2s ease-in-out; /* Added a transition for smooth scaling */
+}
+  
+
+.price {
+    color: #c49c0b;
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+    font-size: 1.5rem;
     font-family: 'Lilita One', cursive;
 }
 
-h5 {
-    font-family: 'Lilita One', cursive;
+/* ____________star rating */
+
+.star-label {
+    display: inline-block;
+    margin: 0 5px; /* Adjust the spacing between stars as needed */
 }
+
+
+/* _____________________________________________________________________Testimonial */
+
+.testimonial-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+
+.testimonial-image-box {
+    display: flex;
+   justify-content: center;
+    width: 70%;
+    height: 70%;
+}
+
+
+  
+  @media (max-width: 768px) {
+    .h-card {
+      max-height: 100rem;
+
+    }
+  }
+  
+
+
+
+
   
 
 

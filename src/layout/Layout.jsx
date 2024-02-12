@@ -10,8 +10,8 @@ function Layout() {
       
              
               <Navbar />
-              <div className='mt-5'><Outlet /></div>
-              <Footer />
+              <div className='mt-5 mb-5'><Outlet /></div>
+              <Footer className='mt-5' />
            
     </>
   );

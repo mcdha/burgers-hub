@@ -7,10 +7,15 @@
     width: 100%;
 }
 
+.white-background {
+    background-color: white;
+}
+
 .navbar {
-    background-color: transparent;
+    /* background-color: transparent; */
     color: #676767;
     padding: 15px;
+    z-index: 100;
 }
 
 .navbar-brand img {

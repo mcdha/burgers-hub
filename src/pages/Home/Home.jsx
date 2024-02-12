@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import YouTube from 'react-youtube';
 import './home.css'
+import Api from './Api';
+import Testimonials from './Testimonials';
+import { MDBModal, MDBModalHeader, MDBModalBody, MDBBtn, MDBModalFooter } from 'mdb-react-ui-kit';
+
 
 
 
@@ -22,6 +26,25 @@ const Home = () => {
 };
 
     const videoId = '7O0FcxNjB6Q';
+// _________________________________________________________________
+
+
+    const [email, setEmail] = useState('');
+    const [successModal, setOpen] = useState(false);
+
+    const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+}
+
+    const handleEmailSubmit = () => {
+        localStorage.setItem('storedEmail', email);
+        setOpen(true);
+        setEmail('');
+}
+
+    const closeSuccessModal = () => {
+        setOpen(false);
+}
 
   return (
    <>
@@ -83,7 +106,7 @@ const Home = () => {
             </div>
 
             <div className="col-12 col-lg-8 col-md-6 mt-2">
-                <h2 className=''>Burger Is An Important Part Of A Balanced Diet</h2>
+                <h2>Burger Is An Important Part Of A Balanced Diet</h2>
                 <p className='p-hero'>Burgers play a crucial role in maintaining a balanced diet. They provide an excellent source of protein, essential for muscle growth and repair, as well as carbohydrates that offer a quick source of energy.
                 </p>
                 <p className='p-hero'>Furthermore, burgers can be a versatile canvas for incorporating various vegetables, like lettuce, tomatoes, and onions, enriching the meal with vitamins and minerals. 
@@ -117,6 +140,73 @@ const Home = () => {
     </div>
     </section>
 
+    <section className='section4 mt-5'>
+        <div className="container">
+
+            <h2 className='text-center'>How It Works</h2>
+            <p className='p-hero text-center'>
+                Welcome to our fast-food experience! Here, we'll take you through the seamless process of ordering and enjoying your favorite burgers, whether you prefer dining in or having your order delivered to your doorstep. Let's dive into how each of these steps works to ensure you have a delicious and convenient dining or delivery experience, tailored to your preferences.
+            </p>
+
+
+            <div className="row mt-5">
+                <div className="col-12 col-lg-4 col-md-4 mt-sm-3">
+                    <div className="card text-center shadow-inner hover-shadow">
+                        <div className="card-header"><i className="fas fa-burger fa-2x"></i></div>
+                        <div className="card-body">
+                            <h5 className="card-title">Pick Burger`s</h5>
+                            <p className="card-text">When it comes to picking the perfect burger, the process is a delightful journey from the moment you step into your favorite burger joint or access their user-friendly website or mobile app.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-12 col-lg-4 col-md-4 mt-sm-3">
+                    <div className="card text-center shadow-inner hover-shadow">
+                        <div className="card-header"><i className="fas fa-money-check fa-2x"></i></div>
+                        <div className="card-body">
+                            <h5 className="card-title">Payment Methods</h5>
+                            <p className="card-text">Selecting a payment method for your burger order is designed to be both flexible and accommodating, ensuring that the payment process is as seamless as your delivery and dining experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-12 col-lg-4 col-md-4 mt-sm-3">
+                    <div className="card text-center shadow-inner hover-shadow">
+                        <div className="card-header"><i className="fas fa-truck-fast fa-2x"></i></div>
+                        <div className="card-body">
+                            <h5 className="card-title">Delivery Fast</h5>
+                            <p className="card-text">The delivery process is a well-orchestrated system designed to bring your delicious burger order to your doorstep with speed and precision. Should you opt for the convenience of delivery.</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Api />
+    <Testimonials />
+    
+    <section>
+        
+    <MDBModal open={successModal}>
+  <MDBModalHeader>Success</MDBModalHeader>
+  <MDBModalBody>Your email has been submitted successfully.</MDBModalBody>
+  <MDBModalFooter>
+    <MDBBtn color="success" onClick={closeSuccessModal}>Close</MDBBtn>
+  </MDBModalFooter>
+</MDBModal>
+
+
+    <br /><br />
+   <div className="container mt-5">
+          <h2 className='text-center'>Join Our Community to Get Discount</h2>
+          <div className='d-flex justify-content-center mt-4'>
+              <input type="email" id="email" name="email" placeholder="Enter your email" value={email} onChange={handleEmailChange} />
+              <button className='btn btn-hero btn-rounded ms-2' type="submit" onClick={handleEmailSubmit}>Submit</button>
+          </div>
+    </div>
+
+    </section>
    </>
 
         

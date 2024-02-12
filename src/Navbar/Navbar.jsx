@@ -13,6 +13,7 @@ const Navbar = () => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setIsSticky(true);
+        
       } else {
         setIsSticky(false);
       }
@@ -26,7 +27,7 @@ const Navbar = () => {
   }, []);
 
   return (
-     <nav className={`navbar navbar-expand-lg ${isSticky ? 'sticky' : ''}`} data-aos="fade-down" data-aos-duration="10000">
+     <nav className={`navbar navbar-expand-lg ${isSticky ? 'sticky white-background' : ''}`} data-aos="fade-down" data-aos-duration="10000">
         
         <div className="container">
           <button
