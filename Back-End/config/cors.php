@@ -15,20 +15,22 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+ 'paths' => ['api/*', 'sanctum/csrf-cookie'],
 
-    'allowed_methods' => ['*'],
+'allowed_methods' => ['*'], // Allow all HTTP methods
 
-    'allowed_origins' => ['*'],
+// Allow requests only from your frontend URL
+'allowed_origins' => ['https://burgershub.vercel.app'], 
 
-    'allowed_origins_patterns' => [],
+'allowed_origins_patterns' => [],
 
-    'allowed_headers' => ['*'],
+'allowed_headers' => ['*'], // Allow all headers
 
-    'exposed_headers' => [],
+'exposed_headers' => [],
 
-    'max_age' => 0,
+'max_age' => 0,
 
-    'supports_credentials' => false,
+'supports_credentials' => false, // Set to true if your API requires credentials like cookies or sessions
+
 
 ];
