@@ -76,7 +76,7 @@ const Navbar = () => {
                 <NavLink
                   className="nav-link"
                  
-                  to="/packages"
+                  to="/package"
                 >
                   Packages
                 </NavLink>

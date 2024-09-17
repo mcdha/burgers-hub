@@ -14,7 +14,7 @@ const Api = () => {
   };
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/menu-items' )
+    axios.get('https://burgers-hub.vercel.app/api/menu-items')
       .then(response => {
         setMenuItems(response.data);
         setLoading(false);
@@ -23,7 +23,8 @@ const Api = () => {
         console.error('Error:', error);
         setLoading(false);
       });
-  }, []);
+}, []);
+
 
   return (
     <section className='section5 mt-5'>
